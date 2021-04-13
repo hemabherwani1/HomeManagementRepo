@@ -9,7 +9,6 @@ import java.sql.Time;
 public class Schedule {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int Schedule_Id;
 
     @Column(name = "Category_Name")
