@@ -10,6 +10,7 @@ import java.util.Objects;
 public class Schedule {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int scheduleId;
 
     @Column(name = "Category_Name")
@@ -44,6 +45,9 @@ public class Schedule {
         this.frequency = frequency;
     }
 
+    public int getScheduleId() {
+        return scheduleId;
+    }
 
     public String getCategoryName() {
         return categoryName;
