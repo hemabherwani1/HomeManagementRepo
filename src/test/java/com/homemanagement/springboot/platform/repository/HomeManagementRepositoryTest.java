@@ -27,10 +27,10 @@ public class HomeManagementRepositoryTest {
         Schedule Schedule = new Schedule("sleep", Date.valueOf("2021-04-13"), Time.valueOf("14:00:00"), Date.valueOf("2021-04-13"), Time.valueOf("15:00:00"), "none");
         //schedule = testEntityManager.persistAndFlush(schedule);
         Schedule savedSchedule = scheduleRepository.save(Schedule);
-        assertThat(savedSchedule).hasFieldOrPropertyWithValue("category_Name","sleep");
-        assertThat(savedSchedule).hasFieldOrPropertyWithValue("Start_Time",Time.valueOf("14:00:00"));
-        assertThat(savedSchedule).hasFieldOrPropertyWithValue("End_Time",Time.valueOf("15:00:00"));
-        assertThat(savedSchedule).hasFieldOrPropertyWithValue("Frequency","none");
+        assertThat(savedSchedule).hasFieldOrPropertyWithValue("categoryName","sleep");
+        assertThat(savedSchedule).hasFieldOrPropertyWithValue("startTime",Time.valueOf("14:00:00"));
+        assertThat(savedSchedule).hasFieldOrPropertyWithValue("endTime",Time.valueOf("15:00:00"));
+        assertThat(savedSchedule).hasFieldOrPropertyWithValue("frequency","none");
 
     }
 }

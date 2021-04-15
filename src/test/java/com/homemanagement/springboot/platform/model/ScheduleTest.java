@@ -57,13 +57,18 @@ public class ScheduleTest {
         schedule =
         new Schedule("sleep", sqlStartDate, sqlStartTime, sqlEndDate, sqlEndTime ,"daily");
 
-        assertEquals("sleep",schedule.getCategory_Name());
-        assertEquals(Date.valueOf("2021-04-12"),schedule.getStart_Date());
-        assertEquals(Time.valueOf("17:45:00"),schedule.getStart_Time());
-        assertEquals(Date.valueOf("2021-04-13"),schedule.getEnd_Date());
-        assertEquals(Time.valueOf("06:00:00"), schedule.getEnd_Time());
+        assertEquals("sleep",schedule.getCategoryName());
+        assertEquals(Date.valueOf("2021-04-12"),schedule.getStartDate());
+        assertEquals(Time.valueOf("17:45:00"),schedule.getStartTime());
+        assertEquals(Date.valueOf("2021-04-13"),schedule.getEndDate());
+        assertEquals(Time.valueOf("06:00:00"), schedule.getEndTime());
         assertEquals("daily",schedule.getFrequency());
     }
 
-
+    @Test
+    public void testForEqual() {
+        Schedule schedule = new Schedule("sleep", null, null, null, null ,"daily");
+        Schedule scheduleNew = new Schedule("sleep", null, null, null, null ,"daily");
+        assertEquals(schedule, scheduleNew);
+    }
 }
