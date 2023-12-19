@@ -39,6 +39,8 @@ public class ScheduleRepositoryTest {
 
         assertEquals(savedSchedule.getCategoryName(), schedule1.getCategoryName());
 
+        assertEquals();
+
 
     }
 
